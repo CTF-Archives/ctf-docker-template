@@ -10,7 +10,8 @@ RUN sudo apt-get install -y socat
 
 # 安装必要的python依赖库
 # RUN sage --python -m pip install pycryptodome gmpy2
-RUN sage --python -m pip install pycryptodome gmpy2 -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN sage --python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple \
+    pycryptodome gmpy2 
 
 # 拷贝源码和启动脚本至根目录
 COPY ./src/main.sage /home/sage
