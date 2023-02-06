@@ -1,4 +1,4 @@
-FROM openjdk:slim-bullseye
+FROM openjdk:21-jdk-buster
 
 # 制作者信息
 LABEL auther_template="Randark_JMT"
