@@ -13,7 +13,7 @@ RUN sudo apt-get install -y socat
 RUN sage --python -m pip install pycryptodome gmpy2 -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 # 拷贝源码和启动脚本至根目录
-COPY ./src/main.sage /
+COPY ./src/main.sage /home/sage
 COPY ./service/docker-entrypoint.sh /
 
 EXPOSE 9999
