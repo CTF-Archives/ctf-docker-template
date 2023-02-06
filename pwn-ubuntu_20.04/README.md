@@ -1,4 +1,4 @@
-# pwn-ubuntu_16.04
+# pwn-ubuntu_20.04
 
 直接将二进制程序放入`./src`目录即可，程序名在`./service/ctf.xinetd`内记得更改
 
