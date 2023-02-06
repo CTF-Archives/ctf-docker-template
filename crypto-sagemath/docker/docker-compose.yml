@@ -1,0 +1,11 @@
+version: '3'
+services:
+  test:
+    image: test
+    # build: ../
+    environment:
+      - FLAG=flag{12345678-test-1234-wasd-87654321}
+    ports:
+      - 9999:9999
+    restart:
+      - unless-stopped
