@@ -1,3 +1,8 @@
 #!/bin/sh
 
-socat -v -s TCP4-LISTEN:9999,tcpwrap=script,reuseaddr,fork EXEC:"python3 /app/main.py",pty,ctty,setsid,stderr
+echo $FLAG > /flag
+
+export FLAG=not_flag
+FLAG=not_flag
+
+java -jar /app/test.jar
