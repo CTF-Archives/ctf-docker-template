@@ -4,7 +4,7 @@ FROM openjdk:21-jdk-buster
 LABEL auther_template="Randark_JMT"
 
 COPY ./src /app
-COPY ./docker/docker-entrypoint.sh /
+COPY ./service/docker-entrypoint.sh /
 
 # 开放的端口取决于服务，一般为8080
 EXPOSE 8080
