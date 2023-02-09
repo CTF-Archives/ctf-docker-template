@@ -6,7 +6,7 @@ LABEL auther_template="Randark_JMT"
 # apt更新，并安装相关依赖
 RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.tuna.tsinghua.edu.cn/g" /etc/apt/sources.list && \
     apt-get update && apt-get -y dist-upgrade && \
-    apt-get update && apt-get install -y lib32z1 xinetd wget netcat curl lsof systemctl supervisor
+    apt-get install -y lib32z1 xinetd
 
 # 新建用户，并进行权限限制
 RUN useradd -m ctf

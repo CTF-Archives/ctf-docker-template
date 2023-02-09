@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 # 制作者信息
 LABEL auther_template="Randark_JMT"
@@ -6,15 +6,14 @@ LABEL auther_template="Randark_JMT"
 # apt更新，并安装相关依赖
 RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.tuna.tsinghua.edu.cn/g" /etc/apt/sources.list && \
     apt-get update && apt-get -y dist-upgrade && \
-    apt-get install -y lib32z1 xinetd
+    apt-get install -y lib32z1 xinetd 
 
 # 新建用户，并进行权限限制
 RUN useradd -m ctf
 WORKDIR /home/ctf
 
 # 复制相关glibc，并处理环境
-RUN cp -R /lib* /home/ctf && \
-    cp -R /usr/lib* /home/ctf
+RUN cp -R /usr/lib* /home/ctf
 
 RUN mkdir /home/ctf/dev && \
     mknod /home/ctf/dev/null c 1 3 && \
@@ -26,8 +25,10 @@ RUN mkdir /home/ctf/dev && \
 RUN mkdir /home/ctf/bin && \
     cp /bin/sh /home/ctf/bin && \
     cp /bin/ls /home/ctf/bin && \
-    cp /bin/cat /home/ctf/bin && \
-    cp /usr/bin/timeout /home/ctf/bin
+    cp /bin/cat /home/ctf/bin 
+
+#remove not have
+RUN rm -rf /home/ctf/lib/apt /home/ctf/lib/cpp /home/ctf/lib/gnupg /home/ctf/lib/init /home/ctf/lib/lsb /home/ctf/lib/os-release /home/ctf/lib/rsyslog /home/ctf/lib/tc /home/ctf/lib/udev /home/ctf/lib/binfmt.d /home/ctf/lib/dpkg /home/ctf/lib/gold-ld /home/ctf/lib/initramfs-tools /home/ctf/lib/ldscripts /home/ctf/lib/mime /home/ctf/lib/python2.7 /home/ctf/lib/systemd /home/ctf/lib/terminfo /home/ctf/lib/compat-ld /home/ctf/lib/gcc /home/ctf/lib/ifupdown /home/ctf/lib/insserv /home/ctf/lib/locale /home/ctf/lib/modules-load.d /home/ctf/lib/python3 /home/ctf/lib/tar /home/ctf/lib/tmpfiles.d
 
 # 部署xinetd服务
 COPY ./service/ctf.xinetd /etc/xinetd.d/ctf
