@@ -7,8 +7,8 @@ COPY ./src/ /var/www/html
 
 RUN chown -R www-data:www-data /var/www/html
 
-COPY ./service/flag.sh /flag.sh
+COPY ./service/docker-entrypoint.sh /docker-entrypoint.sh
 
-RUN chmod +x /flag.sh
+RUN chmod +x /docker-entrypoint.sh
 
-CMD /flag.sh
+CMD /docker-entrypoint.sh

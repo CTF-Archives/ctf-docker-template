@@ -1,3 +1,3 @@
 <?php
-include("flag.php");
+include 'flag.php';
 echo $flag;
