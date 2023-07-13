@@ -16,7 +16,6 @@ RUN sh -c 'mysqld_safe &' \
     && mysql -e "source /var/db.sql;" -uroot -p123456 \
     && chmod -R 777 /docker-entrypoint.sh \
     && chmod -R 777 /var/db.sql \
-    # && chown -R www-data:www-data /var/www/html \
-    && chmod -R 777 /var/www/html/
+    && chown -R www-data:www-data /var/www/html 
 
-CMD   /docker-db-init.sh && /docker-entrypoint.sh
+CMD /docker-entrypoint.sh
