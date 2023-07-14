@@ -2,10 +2,16 @@ from Crypto.Util.number import *
 from hashlib import sha256
 import socketserver
 import signal
+import os
 import string
 import random
 
-flag = b'flag{test}'
+flag = os.getenv('FLAG')
+
+Introduction = """
+此脚本仅为演示，使用此模板时请移除此文件
+此文件做到当选手连接服务，按照说明输入"ctf"之后，输出flag
+"""
 
 banner = br'''
  __        ___             ____          ____            _                 
@@ -52,7 +58,7 @@ class Task(socketserver.BaseRequestHandler):
         self.send(b"\nPlease input the \"ctf\":")
         string = self.recv().decode()
         if string == "ctf":
-            self.send(flag)
+            self.send(flag.encode())
         self.send(b"\nConnection has been closed  =.=  ")
         self.request.close()
 
