@@ -1,25 +1,24 @@
 #!/bin/sh
 
+# Get the user
 user=$(ls /home)
-if [ ! $DASFLAG ]; then
-    if [ ! $FLAG ]; then
-        if [ ! $GZCTF_FLAG ]; then
-            echo flag{TEST_Dynamic_FLAG} | tee /home/$user/flag /flag
-        else
-            echo $GZCTF_FLAG | tee /home/$user/flag /flag
-            export GZCTF_FLAG=no_FLAG
-            GZCTF_FLAG=no_FLAG
-        fi
-    else
-        echo $FLAG | tee /home/$user/flag /flag
-        export FLAG=no_FLAG
-        FLAG=no_FLAG
-    fi
+
+# Check the environment variables for the flag and assign to INSERT_FLAG
+if [ "$DASFLAG" ]; then
+    INSERT_FLAG="$DASFLAG"
+elif [ "$FLAG" ]; then
+    INSERT_FLAG="$FLAG"
+elif [ "$GZCTF_FLAG" ]; then
+    INSERT_FLAG="$GZCTF_FLAG"
 else
-    echo $DASFLAG | tee /home/$user/flag /flag
-    export DASFLAG=no_FLAG
-    DASFLAG=no_FLAG
+    INSERT_FLAG="flag{TEST_Dynamic_FLAG}"
 fi
+
+# 将FLAG写入文件 请根据需要修改
+echo $INSERT_FLAG | tee /home/$user/flag
+
+# 赋予程序运行权限
+chmod 711 /home/ctf/attachment
 
 /etc/init.d/xinetd start;
 sleep infinity;
