@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 # 制作者信息
-LABEL auther_template="Randark_JMT"
+LABEL auther_template="CTF-Archives"
 
 # apt更换镜像源，并安装相关依赖
 RUN sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list && \
