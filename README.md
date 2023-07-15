@@ -34,7 +34,7 @@
 
 `src` 文件夹内存放着题目的项目源码，也可以是pwn题目的二进制文件，即为题目的相关文件
 
-`config` 文件夹内存放着容器内服务相关的配置文件，如 `xinetd` 的配置文件，`nginx` 的配置文件等等
+`config` 文件夹内存放着容器内服务相关的配置文件，如 `nginx` 的配置文件等等
 
 ## About no_socket with crypto
 
