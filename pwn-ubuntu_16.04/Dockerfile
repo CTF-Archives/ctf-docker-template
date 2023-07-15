@@ -3,9 +3,10 @@ FROM ubuntu:16.04
 # 制作者信息
 LABEL auther_template="Randark_JMT"
 
-# apt更新，并安装相关依赖
-RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.tuna.tsinghua.edu.cn/g" /etc/apt/sources.list && \
-    apt-get update && apt-get -y dist-upgrade && \
+# apt更换镜像源，并安装相关依赖
+RUN sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list && \
+    sed -i 's@//.*security.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list
+RUN apt-get update && apt-get -y dist-upgrade && \
     apt-get install -y lib32z1 xinetd
 
 # 新建用户，并进行账户改变
@@ -32,7 +33,7 @@ RUN mkdir /home/ctf/bin && \
     cp /usr/bin/timeout /home/ctf/bin
 
 # 部署xinetd服务
-COPY ./service/ctf.xinetd /etc/xinetd.d/ctf
+COPY ./config/ctf.xinetd /etc/xinetd.d/ctf
 RUN echo "Blocked by ctf_xinetd" > /etc/banner_fail
 
 # 复制容器启动脚本
@@ -48,5 +49,8 @@ RUN chown -R root:ctf /home/ctf && \
     touch /home/ctf/flag && \
     chmod 744 /home/ctf/flag
 
-EXPOSE 9999
+# [可选]指定对外暴露端口，对于GZCTF等平台，强制EXPOSE可能会造成非预期端口泄露，请酌情启用
+# EXPOSE 9999
+
+# 指定容器入口点
 ENTRYPOINT ["/bin/bash","/docker-entrypoint.sh"]
