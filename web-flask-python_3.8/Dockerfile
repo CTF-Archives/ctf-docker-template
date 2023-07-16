@@ -1,4 +1,4 @@
-FROM python:3.10-slim-bullseye
+FROM python:3.8-slim-bullseye
 
 # 制作者信息
 LABEL auther_template="CTF-Archives"
