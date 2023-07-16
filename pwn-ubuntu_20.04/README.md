@@ -14,7 +14,7 @@
 
 ## 如何使用
 
-将程序文件放入 `./src` 目录即可，文件名请修改为 `attachment` ，便于镜像定位程序位置
+将程序文件放入 `./src` 目录即可，文件名请修改为 `attachment` 作为文件名，便于镜像定位程序位置
 
 如果需要更改为自己的文件名，需要在 `./config/ctf.xinetd`、`./Dockerfile` 和 `./service/docker-entrypoint.sh` 中进行修改
 

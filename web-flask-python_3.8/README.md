@@ -6,7 +6,7 @@
 
 ## 如何使用
 
-直接将Flask文件/项目放入 `./src` 目录即可，Flask项目主文件请使用 `app.py` ，便于环境识别Flask项目位置
+直接将Flask文件/项目放入 `./src` 目录即可，Flask项目主文件请使用 `app.py` 作为文件名，便于环境识别Flask项目位置
 
 如使用了 `pycryptodome` 等第三方库，请在 `./Dockerfile` 内补充pip安装语句
 
