@@ -8,8 +8,9 @@ service ctf
     type        = UNLISTED
     port        = 9999
     bind        = 0.0.0.0
+    # 设置xinetd连接启动后的服务程序
     server      = /usr/sbin/chroot
-    # replace helloworld to your program
+    # 设置chroot的相关参数
     server_args = --userspec=1000:1000 /home/ctf ./attachment
     banner_fail = /etc/banner_fail
     # safety options
