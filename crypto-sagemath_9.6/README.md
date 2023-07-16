@@ -13,7 +13,7 @@
 
 ## 如何使用
 
-直接将SageMath文件/项目放入 `./src` 目录即可，文件名在 `./service/docker-entrypoint.sh` 内记得更改
+直接将SageMath文件/项目放入 `./src` 目录即可，文件名建议使用 `main.sage` ，便于环境识别，如需更改文件名，请在 `./service/docker-entrypoint.sh` 内更改
 
 如使用了Python其他第三方库，请在 `./Dockerfile` 内补充pip安装语句
 
