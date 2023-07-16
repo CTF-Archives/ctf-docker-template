@@ -1,4 +1,4 @@
-# web-flask-python_3.8
+# web-flask-python_3.10
 
 ## 环境说明
 
