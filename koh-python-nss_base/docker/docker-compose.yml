@@ -1,0 +1,11 @@
+version: '3'
+services:
+  test:
+    build: ../
+    environment:
+      # koh除非你有特殊需求，否则不需要flag
+      FLAG: "no_flag"
+    ports:
+      # 设置了暴露端口
+      - 5000:5000
+    restart: unless-stopped

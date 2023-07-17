@@ -1,0 +1,13 @@
+{
+    "name": "ctf-challenge",
+    "version": "1.0.0",
+    "description": "A simple CTF challenge",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1"
+    }
+  }
+  

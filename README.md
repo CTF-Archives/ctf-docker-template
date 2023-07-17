@@ -13,6 +13,8 @@
 
 ## 关于每个模板的文件夹结构
 
+### 主要结构
+
 这里以 `crypto-python_3.8-no_socket` 模板为例
 
 ```plaintext
@@ -35,6 +37,12 @@
 `src` 文件夹内存放着题目的项目源码，也可以是pwn题目的二进制文件，即为题目的相关文件
 
 `config` 文件夹内存放着容器内服务相关的配置文件，如 `nginx` 的配置文件等等
+
+### 其他文件说明
+
+`flag.php` 用于直接查看flag文件的测试文件，访问可直接查看当前题目根目录下的flag文件，如果文件不存在则会输出error
+
+`shell.php` 一句话木马，用于测试web容器稳定性
 
 ## About no_socket with crypto
 
