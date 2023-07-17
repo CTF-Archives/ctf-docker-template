@@ -1,0 +1,11 @@
+version: '3'
+services:
+  test:
+    build: ../
+    environment:
+      # 仅为测试用flag
+      FLAG: "flag{a63b4d37-7681-4850-b6a7-0d7109febb19}"
+    ports:
+      # 设置了暴露端口
+      - 8080:8080
+    restart: unless-stopped
