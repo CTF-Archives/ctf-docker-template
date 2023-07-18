@@ -71,7 +71,7 @@ sed -i ""s/\r//"" docker-entrypoint.sh
 
 欢迎直接提issue，一般于三个工作日内就能有回复，也请遇到问题的时候能提供当前的整体题目文件，以及具体的报错/信息
 
-也欢迎通过 [CTF快速入门手册 - QQ群聊](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=wJ35e-T-qSlU7Y3Cs-PAasrAvZfRSc9k&authKey=WNEQbZUpolxgfKjUHHoUIoTBvSnvk2jZtcyWlhaDcUZ6ZYGgvywqi1ah5D7UwUrg&noverify=0&group_code=590430891) 联系维护人员寻求帮助
+也欢迎通过 [CTF-Archives售后快速服务群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=KFamhBpmURTZpndhc0MI7_1l3a6Xezrf&authKey=Yenwm7%2B%2F%2FT%2BtSXCSyr%2B7fYS47Ot0MwFqesH4HOLT8ZADE2e9XO6AS96HQvjxh%2B%2BG&noverify=0&group_code=894957229) 或者 [CTF快速入门手册 - QQ群聊](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=wJ35e-T-qSlU7Y3Cs-PAasrAvZfRSc9k&authKey=WNEQbZUpolxgfKjUHHoUIoTBvSnvk2jZtcyWlhaDcUZ6ZYGgvywqi1ah5D7UwUrg&noverify=0&group_code=590430891) 联系维护人员寻求帮助
 
 ## A little advertisement
 
