@@ -11,9 +11,9 @@
 
 **有问题请开issue，好用请点star**
 
-## 关于每个模板的文件夹结构
+## 请注意，此仓库内的模板仅在Linux环境（linux/amd64）下进行测试并保证可用性，如果为windows（windows/amd64）或者macos（linux/arm）等其他架构，不保证不会出问题😔
 
-### 主要结构
+## 关于每个模板内的文件内容
 
 这里以 `crypto-python_3.8-no_socket` 模板为例
 
@@ -66,6 +66,8 @@ sed -i ""s/\r//"" docker-entrypoint.sh
 即通过正则匹配，直接替换掉 `\r` 字符，不过此方案不一定能完全解决问题
 
 建议直接在linux下执行 `git clone` 操作，或者直接从github下载zip版本的源码，避免一些奇奇怪怪的编码问题
+
+请注意，`sed`指令在`unix（macos）`下的预期执行效果与`linux`下的预期执行效果不同
 
 ## 如有其他问题
 
