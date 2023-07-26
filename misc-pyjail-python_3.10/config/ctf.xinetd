@@ -4,13 +4,12 @@ service ctf
     socket_type = stream
     protocol    = tcp
     wait        = no
-    user        = root
+    user        = ctf
     type        = UNLISTED
     port        = 9999
     bind        = 0.0.0.0
-    server      = /usr/sbin/chroot
-    # replace helloworld to your program（要跑的服务）
-    server_args = --userspec=1000:1000 / python3 /home/server.py
+    server      = /usr/local/bin/python3
+    server_args = -u /home/ctf/server.py
     banner_fail = /etc/banner_fail
     # safety options
     per_source	= 10 # the maximum instances of this service per source IP address

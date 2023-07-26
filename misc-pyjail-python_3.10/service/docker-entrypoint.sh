@@ -23,6 +23,8 @@ fi
 # 将FLAG写入文件 请根据需要修改
 echo $INSERT_FLAG | tee /flag
 
+chmod 744 /flag
+
 
 # 启动 xinetd 服务
 /etc/init.d/xinetd start;
