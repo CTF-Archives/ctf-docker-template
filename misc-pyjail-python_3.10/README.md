@@ -1,6 +1,6 @@
 # misc-pyjail-python_3.10
 
-** 感谢 @gtg2619 师傅对此模板的贡献 **
+** 感谢 [@gtg2619](https://github.com/gtg2619) 师傅对此模板的贡献 **
 
 ## 环境说明
 
