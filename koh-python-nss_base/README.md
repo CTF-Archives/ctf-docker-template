@@ -9,8 +9,9 @@ KOH题目是基于HTTP服务与后端评判系统进行交互的,故题目容器
 ### upload
 
 ```python
-python@app.route('/upload', methods=['POST'])
+@app.route('/upload', methods=['POST'])
 def upload():
+				pass
 ```
 
 该路由负责接收用户上传的数据。数据将以表单数据的形式进行上传，参数名为file。
@@ -40,6 +41,7 @@ requests.post(f'http://{url}/upload', files={
 ```python
 @app.route('/check', methods=['POST'])
 def check():
+				pass
 ```
 
 当后端完成对/upload路由的访问且没有异常时，将访问/check路由。访问示例代码如下：
