@@ -26,5 +26,6 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: 已打包模板下载
+          removeArtifacts: True
           artifacts: "release/*"
           bodyFile: "./source-workflow/body.md"
