@@ -4,6 +4,9 @@ on:
     branches:
       - main
 
+env:
+  RELEASE_NAME: "已打包模板下载"
+
 jobs:
   deploy:
     name: Publish template to Github Release
@@ -22,11 +25,14 @@ jobs:
       - name: Package
         run: python3 ./source-workflow/deploy.py
       
+      - name: Delete old release
+        uses: liudonghua123/delete-release-action@v1
+        with:
+          release_name: ${{ env.RELEASE_NAME  }}
+      
       - name: Release
         uses: ncipollo/release-action@v1
         with:
-          replacesArtifacts: true
-          removeArtifacts: true
-          tag: 已打包模板下载
+          tag: ${{ env.RELEASE_NAME  }}
           artifacts: "release/*"
           bodyFile: "./source-workflow/body.md"
