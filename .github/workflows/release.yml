@@ -29,7 +29,7 @@ jobs:
         with:
           # repo: '<owner>/<repoName>' # you can input a another repo here, defaults to current repo
           release-drop: true
-          release-keep-count: 2
+          release-keep-count: -1
           release-drop-tag: true
           pre-release-drop: true
           pre-release-keep-count: -1
