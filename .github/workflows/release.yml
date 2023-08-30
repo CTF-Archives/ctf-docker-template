@@ -23,5 +23,6 @@ jobs:
       - name: Release
         uses: ncipollo/release-action@v1
         with:
+          tag: newest
           artifacts: "release/*"
           bodyFile: "./workflow-action/body.md"
