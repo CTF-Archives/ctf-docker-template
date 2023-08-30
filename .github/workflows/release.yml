@@ -6,8 +6,10 @@ on:
 
 jobs:
   deploy:
-    name: Deploy docs
+    name: Publish template to Github Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout main
         uses: actions/checkout@v2
