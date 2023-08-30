@@ -2,7 +2,7 @@ name: Publish template to Github Release
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
