@@ -6,7 +6,6 @@ on:
 
 env:
   RELEASE_NAME: "已打包模板下载"
-  GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
 jobs:
   deploy:
@@ -28,8 +27,17 @@ jobs:
       
       - uses: sgpublic/delete-release-action@v1.1
         with:
+          # repo: '<owner>/<repoName>' # you can input a another repo here, defaults to current repo
           release-drop: true
-          release-keep-count: -1
+          release-keep-count: 2
+          release-drop-tag: true
+          pre-release-drop: true
+          pre-release-keep-count: -1
+          pre-release-drop-tag: true
+          draft-drop: true
+          draft-drop-count: -1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Release
         uses: ncipollo/release-action@v1
