@@ -1,0 +1,27 @@
+name: Publish template to Github Release
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Deploy docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+
+      - name: Package
+        run: python3 ./workflow-action/deploy.py
+      
+      - name: Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "release/*"
+          bodyFile: "./workflow-action/body.md"
