@@ -13,6 +13,7 @@ for directory in florders:
     if (
         not directory.name.startswith(".")
         and not directory.name.startswith("sp")
+        and not directory.name.startswith("source")
         and os.path.isdir("./" + directory.name)
         and directory.name != "release"
     ):

@@ -9,9 +9,9 @@
 
 三种动态flag部署方式，支持GZCTF、CTFd、安恒DASCTF等支持Docker动态部署题目靶机的平台
 
-**有问题请开issue，好用请点star**
+**有问题请开issue，好用请点star，有问题的话欢迎通过 [CTF-Archives售后快速服务群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=KFamhBpmURTZpndhc0MI7_1l3a6Xezrf&authKey=Yenwm7%2B%2F%2FT%2BtSXCSyr%2B7fYS47Ot0MwFqesH4HOLT8ZADE2e9XO6AS96HQvjxh%2B%2BG&noverify=0&group_code=894957229) 联系维护人员寻求帮助**
 
-## 请注意，此仓库内的模板仅在Linux环境（linux/amd64）下进行测试并保证可用性，如果为windows（windows/amd64）或者macos（linux/arm）等其他架构，不保证不会出问题😔
+## 请注意，此仓库内的模板仅在Linux环境（linux/amd64）下进行测试并保证可用性，如果为windows（windows/amd64）或者macos（linux/arm）等其他架构，不保证可用性😔
 
 ## 关于每个模板内的文件内容
 
@@ -69,12 +69,16 @@ sed -i ""s/\r//"" docker-entrypoint.sh
 
 请注意，`sed`指令在`unix（macos）`下的预期执行效果与`linux`下的预期执行效果不同
 
-## 如有其他问题
-
-欢迎直接提issue，一般于三个工作日内就能有回复，也请遇到问题的时候能提供当前的整体题目文件，以及具体的报错/信息
-
-也欢迎通过 [CTF-Archives售后快速服务群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=KFamhBpmURTZpndhc0MI7_1l3a6Xezrf&authKey=Yenwm7%2B%2F%2FT%2BtSXCSyr%2B7fYS47Ot0MwFqesH4HOLT8ZADE2e9XO6AS96HQvjxh%2B%2BG&noverify=0&group_code=894957229) 或者 [CTF快速入门手册 - QQ群聊](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=wJ35e-T-qSlU7Y3Cs-PAasrAvZfRSc9k&authKey=WNEQbZUpolxgfKjUHHoUIoTBvSnvk2jZtcyWlhaDcUZ6ZYGgvywqi1ah5D7UwUrg&noverify=0&group_code=590430891) 联系维护人员寻求帮助
-
 ## A little advertisement
 
 某 [Randark-JMT](https://github.com/Randark-JMT) 可以无偿为CTF平台搭建、题目打包提供一定帮助，欢迎联系😘
+
+## 参考与鸣谢
+
+[https://github.com/CTFTraining](https://github.com/CTFTraining)
+
+感谢**glzjin-赵总**和**mozhu1024-陌竹**师傅们的项目，根据上述仓库，此项目才有了雏形，感谢他们为CTF事业做出的巨大贡献
+
+[qsnctf / qsnctf_base_docker_images 青少年CTF基础Docker镜像](https://github.com/qsnctf/qsnctf_base_docker_images)
+
+感谢**末心**师傅对相关模板作出的建议与努力

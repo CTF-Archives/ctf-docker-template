@@ -20,11 +20,11 @@ jobs:
           python-version: "3.10"
 
       - name: Package
-        run: python3 ./workflow-action/deploy.py
+        run: python3 ./source-workflow/deploy.py
       
       - name: Release
         uses: ncipollo/release-action@v1
         with:
-          tag: newest
+          tag: 已打包模板下载
           artifacts: "release/*"
-          bodyFile: "./workflow-action/body.md"
+          bodyFile: "./source-workflow/body.md"
