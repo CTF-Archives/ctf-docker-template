@@ -6,6 +6,7 @@ on:
 
 env:
   RELEASE_NAME: "已打包模板下载"
+  GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
 jobs:
   deploy:
@@ -25,10 +26,10 @@ jobs:
       - name: Package
         run: python3 ./source-workflow/deploy.py
       
-      - name: Delete old release
-        uses: liudonghua123/delete-release-action@v1
+      - uses: sgpublic/delete-release-action@v1.1
         with:
-          release_name: ${{ env.RELEASE_NAME  }}
+          release-drop: true
+          release-keep-count: -1
       
       - name: Release
         uses: ncipollo/release-action@v1
