@@ -20,7 +20,7 @@ for directory in florders:
         print("Current florder: " + directory.name)
         # test\<directory>.zip
         with zipfile.ZipFile(
-            pathlib.Path("release") / directory.with_suffix(".zip").name,
+            pathlib.Path("release") / directory.with_suffix(directory.suffix + ".zip").name,
             "w",
             compression=zipfile.ZIP_DEFLATED,
             compresslevel=9,
