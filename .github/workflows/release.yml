@@ -27,5 +27,6 @@ jobs:
         with:
           tag: 已打包模板下载
           removeArtifacts: true
+          replacesArtifacts: true
           artifacts: "release/*"
           bodyFile: "./source-workflow/body.md"
