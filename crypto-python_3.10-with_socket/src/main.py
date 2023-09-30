@@ -13,13 +13,14 @@ Introduction = """
 此文件做到当选手连接服务，按照说明输入"ctf"之后，输出flag
 """
 
-banner = br'''
- __        ___             ____          ____            _                 
- \ \      / / |__  _   _  / ___|  ___   / ___|  ___ _ __(_) ___  _   _ ___ 
-  \ \ /\ / /| '_ \| | | | \___ \ / _ \  \___ \ / _ \ '__| |/ _ \| | | / __|
-   \ V  V / | | | | |_| |  ___) | (_) |  ___) |  __/ |  | | (_) | |_| \__ \
-    \_/\_/  |_| |_|\__, | |____/ \___/  |____/ \___|_|  |_|\___/ \__,_|___/
-                   |___/                                                                  
+BANNER = br'''
+       ____ _____ _____       _             _     _                
+      / ___|_   _|  ___|     / \   _ __ ___| |__ (_)_   _____  ___ 
+     | |     | | | |_ _____ / _ \ | '__/ __| '_ \| \ \ / / _ \/ __|
+     | |___  | | |  _|_____/ ___ \| | | (__| | | | |\ V /  __/\__ \
+      \____| |_| |_|      /_/   \_\_|  \___|_| |_|_| \_/ \___||___/
+                                                               
+
 '''
 
 table = string.ascii_letters+string.digits
@@ -54,7 +55,7 @@ class Task(socketserver.BaseRequestHandler):
 
     def handle(self):
         signal.alarm(30)
-        self.send(banner)
+        self.send(BANNER)
         self.send(b"\nPlease input the \"ctf\":")
         string = self.recv().decode()
         if string == "ctf":
