@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# 删除启动脚本，以防非预期
+rm -f /app/docker-entrypoint.sh
+
 # 通过socat转发Python会话
 # TCP4-LISTEN:9999 服务将会转发到9999端口
 # reuseaddr 启用端口复用，便于多用户同时连接同一个端口
