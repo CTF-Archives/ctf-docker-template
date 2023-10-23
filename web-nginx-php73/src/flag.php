@@ -6,3 +6,4 @@ if (file_exists($file_path)) {
 else{
     echo "error";
 }
+echo $flag;
