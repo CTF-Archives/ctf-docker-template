@@ -19,6 +19,9 @@
 
 CREATE DATABASE ctf;
 use ctf;
+
 create table users (id varchar(300),username varchar(300),password varchar(300));
-insert into users values('1','tanji','OHHHHHHH');
-insert into users values('2','fake_flag','F1rst_to_Th3_eggggggggg!} (4/4)');
+insert into users values('1','user1','OHHHHHHH');
+insert into users values('2','user2','F1rst_to_Th3_eggggggggg!}');
+insert into users values('3','user3','Nothing!');
+insert into users values('4','user4','What are you doing?');

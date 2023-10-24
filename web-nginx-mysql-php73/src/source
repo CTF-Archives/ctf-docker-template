@@ -1,3 +1,0 @@
-<?php
-$sql = "SELECT username,password FROM users WHERE id = ".'(((((('.$_GET["id"].'))))))';
-$result = $conn->query($sql);
