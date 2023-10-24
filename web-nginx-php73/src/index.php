@@ -9,5 +9,5 @@
 
 </pre>
 
-<h3> Webshell is in /shell.php </h3>
+<h3> Webshell is in /shell.php ,Key is "cmd"</h3>
 <h3> flag is in /flag.php </h3>
