@@ -1,5 +1,7 @@
 #!/bin/sh
 
+rm -f /docker-entrypoint.sh
+
 # Get the user
 user=$(ls /home)
 
