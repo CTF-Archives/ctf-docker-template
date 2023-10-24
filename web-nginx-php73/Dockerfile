@@ -3,9 +3,6 @@ FROM php:7.3-fpm-alpine
 # 制作者信息
 LABEL auther_template="CTF-Archives"
 
-# 复制web项目源码
-COPY src /var/www/html
-
 # 安装必要的软件包
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories  &&\
     apk add --update --no-cache nginx bash
@@ -16,6 +13,9 @@ RUN chmod +x /docker-entrypoint.sh
 
 # 复制nginx配置文件
 COPY ./config/nginx.conf /etc/nginx/nginx.conf
+
+# 复制web项目源码
+COPY src /var/www/html
 
 # 重新设置源码路径的用户所有权
 RUN chown -R www-data:www-data /var/www/html
