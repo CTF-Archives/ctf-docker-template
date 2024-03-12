@@ -1,6 +1,7 @@
 # CTF 动态靶机模板
 
-![ctf-docker-template](https://nssctf.wdf.ink//img/WDTJ/202403121324799.png)
+![ctf-docker-template](https://github.com/CTF-Archives/ctf-docker-template/assets/41804496/71e71631-1d10-4076-b63d-8668a7b22a5f)
+
 
 ## About
 
