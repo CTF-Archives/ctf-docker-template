@@ -269,7 +269,7 @@ rm -f /home/ctf/usr/local/lib/python3.10/subprocess.py
 
 #### pyjail-python_3.10-socat / xinetd
 
-**感谢 [@gtg2619](https://github.com/gtg2619) 师傅对此模板的贡献 **
+**感谢 [@gtg2619](https://github.com/gtg2619) 师傅对此模板的贡献**
 
 **环境：**
 
