@@ -47,8 +47,7 @@ RUN sh -c 'mysqld_safe &' \
 # 设置shell的工作目录
 WORKDIR /var/www/html
 
-# # [可选]指定对外暴露端口，对于GZCTF等平台，强制EXPOSE可能会造成非预期端口泄露，请酌情启用
-# # EXPOSE 80
+EXPOSE 80
 
 # 设置nginx日志保存目录
 VOLUME ["/var/log/nginx"]

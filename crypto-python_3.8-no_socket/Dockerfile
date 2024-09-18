@@ -26,8 +26,7 @@ RUN useradd -m ctf
 RUN chown ctf:ctf /app
 USER ctf
 
-# [可选]指定对外暴露端口，对于GZCTF等平台，强制EXPOSE可能会造成非预期端口泄露，请酌情启用
-# EXPOSE 9999
+EXPOSE 9999
 
 # 指定容器入口点
 ENTRYPOINT ["/bin/bash","/app/docker-entrypoint.sh"]
