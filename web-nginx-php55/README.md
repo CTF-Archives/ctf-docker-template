@@ -1,10 +1,10 @@
-# web-nginx-php73
+# web-nginx-php55
 
 部分容器逻辑参考自：[CTFTraining / base_image_nginx_php_73](https://github.com/CTFTraining/base_image_nginx_php_73)，在此感谢 [陌竹 - mozhu1024](https://github.com/mozhu1024) 师傅做出的贡献
 
 ## 环境说明
 
-提供 `Nginx` +`PHP 7.3.33` 的基础环境，默认暴露端口位于 80
+提供 `Nginx` +`PHP 5.5.38` 的基础环境，默认暴露端口位于 80
 
 > 请注意 !!!
 >
