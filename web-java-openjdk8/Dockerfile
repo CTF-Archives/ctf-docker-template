@@ -7,7 +7,7 @@ LABEL auther_template="CTF-Archives"
 COPY ./src /app
 COPY ./service/docker-entrypoint.sh /docker-entrypoint.sh
 
-# 开放的端口取决于服务，一般为8080
+# 开放的端口取决于服务，默认 Demo 为8080
 EXPOSE 8080
 
 # 指定容器入口点
