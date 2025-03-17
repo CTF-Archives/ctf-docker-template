@@ -3,7 +3,7 @@
 rm -f /docker-entrypoint.sh
 
 # Configure Nginx
-mkdir mkdir /run/nginx
+mkdir /run/nginx
 touch /run/nginx/nginx.pid
 
 # Get the user
